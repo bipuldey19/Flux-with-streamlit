@@ -36,7 +36,11 @@ model_choice = st.selectbox(
 )
 
 # Text input from the user
-user_input = st.text_input("Enter a description for the image:", "Astronaut riding a horse")
+user_input = st.text_area(
+    "Enter a description for the image:", 
+    "Astronaut riding a horse", 
+    height=150  # Increase height here (in pixels)
+)
 
 # Full-width "Generate Image" button
 generate_button = st.button("Generate Image", use_container_width=True)
