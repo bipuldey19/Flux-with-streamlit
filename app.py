@@ -4,7 +4,8 @@ import io
 from PIL import Image
 
 # Hugging Face API token
-headers = {"Authorization": "Bearer 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"}
+hf_token = st.secrets["HUGGINGFACE_API_TOKEN"]
+headers = {"Authorization": f"Bearer {hf_token}"}
 
 # Set the title of the web page
 st.set_page_config(page_title="Flux Image Generator")
